@@ -1,0 +1,103 @@
+X = 1
+overduechannel = FreeFile
+Open TenantProperty_File For Random As overduechannel Len = TenantProperty_Length
+Get overduechannel, X, addoverdue
+If TP_Overdue2.Text = "00:00:00" Then
+Do While Not EOF(overduechannel) And oncefound = False
+If Trim(TenantIDs.List(TenantIDs.ListIndex)) = Trim(addoverdue.Tenant_REFID) Then
+    addoverdue.OverDue02 = TP_Overdue2.Text
+    addoverdue.PaymentMade = False
+    Calculate2.Text = TP_RentalPrice.Text * 2
+    inform.Visible = False
+    TP_Overdue2.BackColor = &H8000000F
+    SaveChanges.Visible = False
+    TenantIDs.SetFocus
+    addoverdue.PaymentPriceOverDue = Calculate2.Text
+    TenantProperty_File_Pointer = X
+    Put overduechannel, X, addoverdue
+End If
+X = X + 1
+Get overduechannel, X, addoverdue
+Loop
+Close overduechannel
+Else
+X = 1
+overduechannel = FreeFile
+Open TenantProperty_File For Random As overduechannel Len = TenantProperty_Length
+Get overduechannel, X, addoverdue
+If TP_Overdue3.Text = "00:00:00" Then
+Do While Not EOF(overduechannel) And oncefound = False
+If Trim(TenantIDs.List(TenantIDs.ListIndex)) = Trim(addoverdue.Tenant_REFID) Then
+    addoverdue.OverDue03 = TP_Overdue3.Text
+    addoverdue.PaymentMade = False
+    Calculate3.Text = addoverdue.PaymentPriceOverDue + (TP_RentalPrice.Text * 2)
+    inform.Visible = False
+    TP_Overdue3.BackColor = &H8000000F
+    SaveChanges.Visible = False
+    TenantIDs.SetFocus
+End If
+X = X + 1
+Get overduechannel, X, addoverdue
+Loop
+Close overduechannel
+End If
+End If
+Else
+TotalOverDue.ForeColor = &H8000000F
+TotalOverDue.BackColor = &HFF
+Label24.ForeColor = &HFF
+TakeRentalPayment.Visible = True
+TheTotalRental.Visible = True
+Overduepayment.Visible = True
+Label23.Visible = True
+Label24.Visible = True
+TakePayment.Visible = True
+Cancelbutton.Visible = True
+TotalOverDue.Visible = True
+Label25.Visible = True
+inform.Visible = False
+X = 1
+overduechannel = FreeFile
+Open TenantProperty_File For Random As overduechannel Len = TenantProperty_Length
+Get overduechannel, X, addoverdue
+If TP_Overdue2.Text = "00:00:00" Then
+Do While Not EOF(overduechannel) And oncefound = False
+If Trim(TenantIDs.List(TenantIDs.ListIndex)) = Trim(addoverdue.Tenant_REFID) Then
+    addoverdue.OverDue02 = TP_Overdue2.Text
+    addoverdue.PaymentMade = False
+    Calculate2.Text = TP_RentalPrice.Text * 2
+    inform.Visible = False
+    TP_Overdue2.BackColor = &H8000000F
+    SaveChanges.Visible = False
+    TenantIDs.SetFocus
+      addoverdue.PaymentPriceOverDue = Calculate2.Text
+    TenantProperty_File_Pointer = X
+    Put overduechannel, X, addoverdue
+End If
+X = X + 1
+Get overduechannel, X, addoverdue
+Loop
+Close overduechannel
+Else
+X = 1
+overduechannel = FreeFile
+Open TenantProperty_File For Random As overduechannel Len = TenantProperty_Length
+Get overduechannel, X, addoverdue
+If TP_Overdue3.Text = "00:00:00" Then
+Do While Not EOF(overduechannel) And oncefound = False
+If Trim(TenantIDs.List(TenantIDs.ListIndex)) = Trim(addoverdue.Tenant_REFID) Then
+    addoverdue.OverDue03 = TP_Overdue3.Text
+    addoverdue.PaymentMade = False
+    Calculate3.Text = addoverdue.PaymentPriceOverDue + (TP_RentalPrice.Text * 2)
+    inform.Visible = False
+    TP_Overdue3.BackColor = &H8000000F
+    SaveChanges.Visible = False
+    TenantIDs.SetFocus
+End If
+X = X + 1
+Get overduechannel, X, addoverdue
+Loop
+Close overduechannel
+End If
+End If
+End If

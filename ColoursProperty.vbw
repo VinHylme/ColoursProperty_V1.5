@@ -1,0 +1,15 @@
+Welcome_to_colours = 50, 50, 703, 657, , 25, 25, 678, 632, C
+AColoursPropertyModule = 50, 50, 703, 657, 
+Register_account = 569, -8, 1222, 599, , 100, 100, 753, 707, C
+Dashboard = 130, 130, 1018, 495, , 200, 200, 853, 807, C
+Add_Tenant_to_Property = 200, 200, 769, 807, , 279, 275, 848, 882, C
+View_Tenant_Property = 0, 0, 0, 0, C, 0, 0, 569, 607, C
+Landlords = 0, 0, 755, 451, , 209, -10, 964, 441, C
+Print_Landlord = 50, 50, 835, 501, , 50, 50, 805, 501, C
+Agent = 125, 125, 910, 576, , 50, 50, 835, 501, C
+Tenants = 0, 0, 850, 451, , 75, 75, 888, 526, C
+Properties = 100, 100, 913, 551, , 25, 25, 838, 476, C
+RemoveTenantFromProperty = 0, 0, 869, 451, , 75, 75, 944, 526, C
+Print_Agent = 0, 0, 0, 0, C, 100, 100, 969, 551, C
+FullReport = 150, 150, 1042, 539, , 125, 125, 994, 576, C
+Print_Tenant = 175, 175, 1044, 626, Z, 150, 150, 1019, 601, C
